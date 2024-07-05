@@ -1,0 +1,143 @@
+
+        .container{
+		width: 90%;
+		padding: 20px;
+		margin: 50px 50px;
+		display: flex;
+    
+		flex-direction:auto;
+        flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.box{
+		width: 200px;
+		height: 200px;
+		background:#F2FFDE;
+        margin: 10px 10px;
+        transition: 1s;
+        border-radius: 20px;
+        border: 3px solid green;
+
+	}
+    .box:hover{
+		transform: scale(1.3);
+		background:#A0D2EB;
+		z-index: 2;
+		box-shadow: 2px 2px 2px #000;
+		
+	}
+    .img
+    {
+        width:200px;
+        height:110px;
+        display: inline;
+        border-radius: 15px ;
+    }
+    h4{
+        text-align: center;
+    }
+    form input
+    {
+        width:42px;
+        height:42px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+    .cont2
+    {
+        width: 90%;
+		padding:30px 65px;
+		display: flex;
+		flex-direction:column;
+        flex-wrap:wrap;
+		justify-content: center;
+    }
+    form .input-field
+    {
+        flex-direction: row;
+        column-gap: 10px;
+        border-radius:10px;
+    }
+
+    :where(.cont2,form,.input-field)
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    button
+    {
+        margin-top: 25px;
+    }
+    .left
+    {
+        display: flex;
+        flex: left;
+        width:50%;
+    }
+    .sub
+    {
+        display: flex;
+       justify-content: center;
+       padding-top: 1rem;
+       font-size: large;
+        
+    }
+    .left{
+        
+        padding-left: 1rem;
+    }
+
+    .right
+    {
+        padding-left: 1rem;
+    }
+    ul{
+        position: absolute;
+        top: 63%;
+        left: 90%;
+        transform: translate(-50%);
+        display: flex;
+    }
+    ul li{
+        list-style: none;
+        width:60px;
+        height: 60px;
+        background-color: #fff;
+        border-radius: 50%;
+        transition: .5s;
+    }
+    ul li:hover{
+        background: #93ccc4;
+    }
+    ul li span
+    {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 4px solid black;
+        transition: .5s;
+    }
+    ul li.next span{
+        top: 50%;
+        right: 20%;
+        transform: translateY(-13px) rotate(-43deg);
+        border-left: none;
+        border-top: none;
+    }
+    ul li.next span:before
+    {
+        content: '';
+        position: absolute;
+        width: 38px;
+        height: 4px;
+        background: black;
+        transform-origin: right;
+        transform: rotate(45deg) translate(0px,25px)
+ 
+    }

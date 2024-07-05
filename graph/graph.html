@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page</title>
+    <link rel="stylesheet" href="graph.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+<div class="box second-box ggf">
+
+    <div>
+      <div class="custom-checkbox">
+          <input id="status" type="checkbox" name="status">
+          <label for="status">
+              <div class="status-switch" data-unchecked="individual" data-checked="Overall">
+              </div>
+          </label>
+      </div>
+      <button id="button1" onclick="changeColor(1)">Topic A</button><br>
+      <button id="button2" onclick="changeColor(2)">Topic B</button><br>
+      <button id="button3" onclick="changeColor(3)">Topic C</button><br>
+      <button id="button4" onclick="changeColor(4)">Topic D</button><br>
+      <button id="button5" onclick="changeColor(5)">Topic E</button><br>
+  
+    </div>
+        <div  >
+            <canvas id="myChart" width="700" height="400"></canvas>
+            <script>
+                // Sample data
+                var data = {
+                  labels: ['Maximum Marks', 'Minimum Marks', 'Best Time', 'Average marks', 'Average Percentage','Average Time'],
+                  datasets: [{
+                    backgroundColor: '#3A6000',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1,
+                    data: [20, 12, 18, 14, 85, 22 ],
+                  }]
+                };
+              
+                // Configuration options
+                var options = {
+                  scales: {
+                    y: [{
+                      display:true,
+                      ticks: {
+                                beginAtZero: true,
+                                steps: 10,
+                                stepValue: 5,
+                                max: 100}
+                  }]
+                  }
+                };
+              
+                // Get the canvas element
+                var ctx = document.getElementById('myChart').getContext('2d');
+              
+                // Create a bar chart
+                var myChart = new Chart(ctx, {
+                  type: 'bar',
+                  data: data,
+                  options: options
+                });
+              </script>
+              
+    </div>
+</div>
+</body>
+
+</html>
